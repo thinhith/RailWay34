@@ -1,5 +1,5 @@
 package com.thinh.entily;
 
-public class TestPullgit {
+public class test2 {
 
 }
