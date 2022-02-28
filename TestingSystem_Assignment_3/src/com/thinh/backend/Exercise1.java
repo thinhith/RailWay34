@@ -23,8 +23,6 @@ public class Exercise1 {
 		switch (qq2.length()) {
 		case 1:
 			return "0000" + qq2;
-			
-
 		case 2:
 			return "000" + qq2;
 		case 3:
@@ -35,6 +33,16 @@ public class Exercise1 {
 			return qq2;
 		}
 
+	}
+	public static void question2in2() {
+		Random random = new Random();
+		int q2;
+		q2 = random.nextInt(99999);
+		String qq2 = String.valueOf(q2);
+		while (qq2.length()<5) {
+			qq2 = "0"+q2;
+			break;
+		}
 	}
 
 	public void question3() {
@@ -49,6 +57,15 @@ public class Exercise1 {
 		System.out.println(q3.substring(q3.length()-2));
 		// BÀI NÀY CÓ TRƯỜNG HỢP CÓ 1 CHỮ SỐ
 		
+	}
+	public void question3in2() {
+		Random random = new Random();
+		int q2;
+		q2 = random.nextInt(99999);
+		int q3;
+		if(q2 % 100 !=0) {
+			System.out.println("0" + q2);
+		}
 	}
 
 	public static void question4() {

@@ -12,9 +12,10 @@ public static void main(String[] args) {
 	Exercise1 exercise1 = new Exercise1();
 //	exercise1.question1();
 	exercise1.question2();
-	System.out.println(exercise1.question2());
+//	System.out.println(exercise1.question2());
 //	exercise1.question3();
 //	exercise1.question4();
+	exercise1.question3in2();
 	//===========================================================
 	//===============EXERCISE-2==================================
 	Exercise2 exercise2 = new Exercise2();

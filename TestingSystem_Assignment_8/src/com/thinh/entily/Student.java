@@ -1,9 +1,10 @@
 package com.thinh.entily;
 
-public class Student {
+public class Student implements Comparable<Student> {
 	public static int COUNT = 0;
 	private int id;
 	private String name;
+	
 	public String getName() {
 		return name;
 	}
@@ -23,5 +24,11 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + "]";
 	}
+	public int compareTo(Student o) {
+		return this.name.compareTo(o.getName());
+		// TODO Auto-generated method stub
+
+	}
+	
 	
 }
