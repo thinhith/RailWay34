@@ -11,7 +11,7 @@ public class ScannerUtils {
 	private static Scanner scaner = new Scanner(System.in);
 	private PhoneCheck checkPhone;
 
-	public  ScannerUtils() {
+	public ScannerUtils() {
 		scaner = new Scanner(System.in);
 		checkPhone = new PhoneCheck();
 	}

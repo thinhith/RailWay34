@@ -33,12 +33,12 @@ public class Group {
 		inputAccounttoGroup();
 	}
 
-
 	public void thongTinGroup() {
 		System.out.println("Thông tin Group");
-		System.out.println("Group [id=" + id + ", name=" + name + ", creatorId=" + creatorId + ", joinDate=" + joinDate + "]");
+		System.out.println(
+				"Group [id=" + id + ", name=" + name + ", creatorId=" + creatorId + ", joinDate=" + joinDate + "]");
 //		return "Group [id=" + id + ", name=" + name + ", creatorId=" + creatorId + ", joinDate=" + joinDate + "]";
-		if(accounts !=null) {
+		if (accounts != null) {
 			System.out.println("Số lượng Acc của group này là" + accounts.length);
 			for (Account account : accounts) {
 				System.out.println(account.toString());
@@ -50,7 +50,7 @@ public class Group {
 		int choose;
 		while (true) {
 			choose = ScannerUtils.inputInt();
-			
+
 			switch (choose) {
 
 			case 1:
@@ -63,7 +63,7 @@ public class Group {
 				break;
 			}
 		}
-		
+
 	}
 
 	public void inputAcc() {
@@ -83,7 +83,5 @@ public class Group {
 			return;
 		}
 	}
-	
-
 
 }

@@ -10,7 +10,8 @@ public class DemoEx1 {
 //		Exercise1.queueStudent();
 	//------------------------------------------------------------------------
 //		Exercise1.ques3OfSet();
-		Exercise1.question4();
+//		Exercise1.question4();
+		Exercise1.question6vs7();
 		
 	}
 

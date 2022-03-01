@@ -1,7 +1,5 @@
 package com.thinh.fronend;
 
-
-
 import com.thinh.entilyEx2.MyMath;
 import com.thinh.entilyEx2.PrimaryStudent;
 import com.thinh.entilyEx2.SecondaryStudent;
@@ -19,7 +17,7 @@ public class DemoEx2 {
 
 		// Ques2
 //		Student.addStudent();
-		
+
 		// Ques3
 //		PrimaryStudent primaryStudent = new PrimaryStudent();
 //		System.out.println(PrimaryStudent.study());

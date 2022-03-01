@@ -9,7 +9,6 @@ public class Department {
 	private byte id;
 	private String name;
 
-	
 	public Department() {
 		super();
 		COUNT++;
@@ -29,6 +28,5 @@ public class Department {
 	public String toString() {
 		return "Department [id=" + id + ", name=" + name + "]";
 	}
-	
-	
+
 }

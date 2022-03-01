@@ -4,12 +4,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-
-
 public class ScannerUtils {
 	private static Scanner scaner = new Scanner(System.in);
-	
-
 
 // Input int
 	public static int inputInt() {

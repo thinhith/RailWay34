@@ -14,9 +14,8 @@ public class FileException extends Exception {
 	public static final String CREATE_FILE_FAIL = "Create file fail!";
 	public static final String DELETE_FILE_SUCCESS = "Delete file success!";
 	public static final String DELETE_FILE_FAIL = "Delete file fail!";
-	
+
 	public FileException() {
-	
-		
+
 	}
 }

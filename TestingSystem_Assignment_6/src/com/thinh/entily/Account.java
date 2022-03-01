@@ -65,14 +65,13 @@ public class Account {
 
 				if (input <= 0) {
 					throw new InvalidAgeInputingException("The age must be greater than 0, please input again");
-				}else 
-					if (input <18) {
-						System.out.println("Your age must be greatern than 18, input again");
-						continue;
-					
+				} else if (input < 18) {
+					System.out.println("Your age must be greatern than 18, input again");
+					continue;
+
 				}
-					return input;
-				
+				return input;
+
 			} catch (Exception e) {
 				System.out.println("Tuổi bạn nhập không đúng ! mời nhập lại");
 			}

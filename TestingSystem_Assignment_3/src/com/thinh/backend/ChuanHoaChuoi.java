@@ -29,7 +29,7 @@ public class ChuanHoaChuoi {
 	}
 
 	public String nhapChuoi() {
-return st = nhapString();
+		return st = nhapString();
 	}
 
 	public String chuanHoa() {

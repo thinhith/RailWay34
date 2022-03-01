@@ -3,8 +3,8 @@ package com.thinh.fronend;
 import com.thinh.utils.ScannerUtils;
 
 public class DemoScannerU {
-public static void main(String[] args) {
-	ScannerUtils scannerUtils = new ScannerUtils();
+	public static void main(String[] args) {
+		ScannerUtils scannerUtils = new ScannerUtils();
 //	scannerUtils.inputFloat();
 //	System.out.println(scannerUtils.inputFloat());
 //	System.out.println(scannerUtils.inputDouble());
@@ -15,6 +15,6 @@ public static void main(String[] args) {
 //	scannerUtils.inputPhone();
 //	scannerUtils.inputPhone2();
 //	scannerUtils.inputEmail2();
-	scannerUtils.inputPassword();
-}
+		scannerUtils.inputPassword();
+	}
 }

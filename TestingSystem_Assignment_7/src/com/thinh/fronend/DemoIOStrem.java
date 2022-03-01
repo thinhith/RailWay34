@@ -15,9 +15,9 @@ public class DemoIOStrem {
 //		IOManager.writeFile("C:\\Users\\thinh\\Desktop\\TestFile2.txt", true, "Myyyyyyyyyyyyyyyyyyyyyy");
 //		Vehicle vehicle = new Vehicle("E250", "Red", "Mecerdes");
 		// Ghi Object
-		/* CHÚ Ý''
-		 * Ở class đọc cần implements Serializble
-		 * Đuôi tên file được khởi tạo cần đặt tên đuôi là "ser"
+		/*
+		 * CHÚ Ý'' Ở class đọc cần implements Serializble Đuôi tên file được khởi tạo
+		 * cần đặt tên đuôi là "ser"
 		 */
 //		FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\thinh\\Desktop\\TestFile2.ser");
 //		// Object ghi vào
@@ -27,7 +27,7 @@ public class DemoIOStrem {
 //		objectOutputStream.close();
 //	IOManager.writeObject(vehicle, "C:\\Users\\thinh\\Desktop", null);
 //		IOManager.readObject(vehicle, "C:\\Users\\thinh\\Desktop\\thinh.ser\\");
-		
+
 //		FileInputStream fileInputStream = new FileInputStream("C:\\Users\\thinh\\Desktop\\thinh.ser");
 //		ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 //		Object obj = objectInputStream.readObject();
@@ -37,21 +37,21 @@ public class DemoIOStrem {
 //		System.out.println(vehicle.getName());
 //		
 // THAM KHẢO CODE TRÊN MẠNG
-	     ObjectInputStream ois = null;
-	     
-	        try {
-	            ois = new ObjectInputStream(new FileInputStream("C:\\Users\\thinh\\Desktop\\thinh.ser"));
-	            // read student
-	            Vehicle vehicle = (Vehicle) ois.readObject();
-	            // show student
-	            System.out.println(vehicle.toString());
-	        } catch (ClassNotFoundException ex) {
-	            ex.printStackTrace();
-	        } catch (IOException ex) {
-	            ex.printStackTrace();
-	        } finally {
-	            ois.close();
-	        }
+		ObjectInputStream ois = null;
+
+		try {
+			ois = new ObjectInputStream(new FileInputStream("C:\\Users\\thinh\\Desktop\\thinh.ser"));
+			// read student
+			Vehicle vehicle = (Vehicle) ois.readObject();
+			// show student
+			System.out.println(vehicle.toString());
+		} catch (ClassNotFoundException ex) {
+			ex.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} finally {
+			ois.close();
+		}
 	}
 
 }

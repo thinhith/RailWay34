@@ -3,10 +3,12 @@ package com.thinh.backend;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
@@ -83,6 +85,7 @@ public static void ques3OfSet() {
 		System.out.println(iterator.next());
 	}
 }
+// Ví dụ về set
 public static void question4() {
 	System.out.println("Nhập số sinh viên muốn tạo");
 	int numStu = ScannerUtils.inputInt();
@@ -106,6 +109,28 @@ public static void question4() {
 		for (Student student : students5) {
 			System.out.println(student);
 		}
+	}
+}
+public static void question6vs7() {
+//	Map<K, V>  ---> ??? 
+	Map<Integer, String> stuMap = new HashMap<Integer,String>() ;
+	// Đối với Map thì sử dụng hàm put() để thêm phần tử
+	stuMap.put(1, "Student1");
+	stuMap.put(2, "Student2");
+	stuMap.put(4, "Student3");
+	stuMap.put(4, "Student4");
+	stuMap.put(5, "Student5");
+	// PP1: Sử dụng convert từ Map sang Set
+	Set<Integer> integers = stuMap.keySet();
+	for (Integer keyStu : integers) {
+		System.out.println(keyStu);
+	}
+// Về cơ bản khi in ra, 2 Phương pháp đều trả ra kết quả giống nhau
+	System.out.println("---------------------------------");
+	// PP 2 dùng Map.Entry
+	// Thắc mắc 1: tại sao ở trên web người ta convert từ Map sang Set để làm gì ? để loại bỏ phần tử trùng lặp ?
+	for(Map.Entry<Integer, String> entry : stuMap.entrySet()) {
+		System.out.println(entry.getKey());
 	}
 }
 

@@ -70,15 +70,16 @@ public class IOManager {
 		System.out.println(WRITE_FILE_SUCCESS);
 
 	}
-public static void readObject(Object object, String path) throws Exception {
-	if (!Files.isFileExists(path)) {
-		throw new Exception(FILE_NOT_EXISTS);
+
+	public static void readObject(Object object, String path) throws Exception {
+		if (!Files.isFileExists(path)) {
+			throw new Exception(FILE_NOT_EXISTS);
+		}
+		FileInputStream fileInputStream = new FileInputStream(path);
+		ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+		Object obj = objectInputStream.readObject();
+		object = obj;
+		objectInputStream.close();
+		System.out.println(object.toString());
 	}
-	FileInputStream fileInputStream = new FileInputStream(path);
-	ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-	Object obj = objectInputStream.readObject();
-	object =  obj;
-	objectInputStream.close();
-	System.out.println(object.toString());
-}
 }

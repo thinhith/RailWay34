@@ -165,8 +165,9 @@ public class Files {
 		}
 
 	}
+
 	public static void renameFile(String inputFile, String newName) throws Exception {
-		if(!isFileExists(inputFile)) {
+		if (!isFileExists(inputFile)) {
 			System.out.println(FILE_NOT_EXISTS);
 		}
 		if (isFileExists(newName)) {
