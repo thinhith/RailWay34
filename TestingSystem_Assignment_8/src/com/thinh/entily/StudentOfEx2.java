@@ -39,12 +39,11 @@ public class StudentOfEx2 implements Comparable<StudentOfEx2> {
 		
 		 this.name.compareTo(o.getName());
 		 if (o.diem>diem) {
-			return 1;
+			return 1; // ?
 		}else if(o.diem<diem) {
-			return -1;
+			return -1; // ?
 		}
 		 return 0;
-		// TODO Auto-generated method stub
 
 	}
 

@@ -31,6 +31,17 @@ public class Account {
 		this.posId = posId;
 		this.createDate = createDate;
 	}
+	public Account(String name) {
+		super();
+		COUNT++;
+		this.iD = COUNT;
+		this.email = email;
+		this.userName = userName;
+		this.fullName = name;
+		this.depId = depId;
+		this.posId = posId;
+		this.createDate = createDate;
+	}
 
 	public Account() {
 		// TODO Auto-generated constructor stub

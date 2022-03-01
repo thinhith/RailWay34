@@ -3,6 +3,7 @@ package com.thinh.backend;
 import java.util.Iterator;
 import java.util.Scanner;
 
+import com.thinh.enity.Account;
 import com.thinh.enity.Department;
 
 public class Exercise5 {
@@ -78,6 +79,77 @@ public class Exercise5 {
 			System.out.println(department[i]);
 		}
 	}
+
+	public static void question7() {
+		Department dep1 = new Department("Accounting");
+		Department dep2 = new Department("Marketing");
+		Department dep3 = new Department("Sale");
+		Department dep4 = new Department("Boss of diretor");
+		Department dep5 = new Department("Waiting Room");
+		Department[] departments = { dep1, dep2, dep3, dep4, dep5 };
+		// Đầu tiên phải kiểm tra chuỗi đó có bao nhiêu khoảng trắng
+		// trường hợp Chuỗi không có khoảng trắng nào thì làm như thế nào.
+		for (int i = 0; i < departments.length; i++) {
+			// Đảo ngược tất cả các từ bằng hàm reverseWords của Java
+			String daoNguocChuoi = daoNguocChuoi(departments[i].name);
+			for (int j = 0; j < departments.length - 1; j++) {
+				String daoNGuoc2 = daoNguocChuoi(departments[j].name);
+				if (daoNguocChuoi.compareToIgnoreCase(daoNGuoc2) < 0) {
+
+					Department temp = departments[i];
+					departments[i] = departments[j];
+					departments[j] = temp;
+				}
+			}
+
+		}
+		for (Department department : departments) {
+			System.out.println(department);
+		}
+	}
+
+
+
+	public static void question8() {
+		Account acc1 = new Account("Trần Văn A");
+		Account acc2 = new Account("Trần Hưng Fạo");
+		Account acc3 = new Account("Trần Văn Bam");
+		Account acc4 = new Account("Nguyễn Văn Woàn");
+		Account[] accounts = { acc1, acc2, acc3, acc4 };
+		
+		for (int i = 0; i < accounts.length; i++) {
+			// Đảo ngược tất cả các từ bằng hàm reverseWords của Java
+			String daoNguocChuoi = daoNguocChuoi(accounts[i].fullName);
+			for (int j = 0; j < accounts.length - 1; j++) {
+				String daoNGuoc2 = daoNguocChuoi(accounts[j].fullName);
+				if (daoNguocChuoi.compareToIgnoreCase(daoNGuoc2) < 0) {
+
+					Account temp = accounts[i];
+					accounts[i] = accounts[j];
+					accounts[j] = temp;
+				}
+			}
+
+		}
+		for (Account account : accounts) {
+			System.out.println(account.fullName);
+		}
+	}
+
+
+	private static String daoNguocChuoi(String name) {
+		name = name.trim();
+		name = name.replaceAll("\\s+", " ");
+		String[] word = name.split(" ");
+		name = "";
+		for (int i = word.length - 1; i >= 0; i--) {
+			name += word[i] + " ";
+
+		}
+
+		return name.substring(0, name.length() - 2);
+	}
+
 
 	public static Department[] inputDepartment() {
 

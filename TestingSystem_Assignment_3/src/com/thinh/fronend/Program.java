@@ -15,7 +15,7 @@ public static void main(String[] args) {
 //	System.out.println(exercise1.question2());
 //	exercise1.question3();
 //	exercise1.question4();
-	exercise1.question3in2();
+//	exercise1.question3in2();
 	//===========================================================
 	//===============EXERCISE-2==================================
 	Exercise2 exercise2 = new Exercise2();
@@ -57,5 +57,10 @@ public static void main(String[] args) {
 //	String name = chuanHoaChuoi.nhapChuoi();
 //	name = chuanHoaChuoi.chuanHoa();
 //	name = chuanHoaChuoi.hienThi();
+	//===========================================================
+			//===============EXERCISE-6-7==================================
+//	Exercise5.question6();
+//	Exercise5.question7();
+	Exercise5.question8();
 }
 }
