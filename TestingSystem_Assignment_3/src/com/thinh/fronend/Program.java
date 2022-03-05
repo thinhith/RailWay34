@@ -6,16 +6,20 @@ import com.thinh.backend.Exercise2;
 import com.thinh.backend.Exercise3;
 import com.thinh.backend.Exercise4;
 import com.thinh.backend.Exercise5;
+import com.thinh.enity.Account;
 
 public class Program {
 public static void main(String[] args) {
 	Exercise1 exercise1 = new Exercise1();
 //	exercise1.question1();
-	exercise1.question2();
+//	exercise1.question2();
 //	System.out.println(exercise1.question2());
 //	exercise1.question3();
 //	exercise1.question4();
 //	exercise1.question3in2();
+//	System.out.println("Ex1");
+
+	
 	//===========================================================
 	//===============EXERCISE-2==================================
 	Exercise2 exercise2 = new Exercise2();
@@ -30,7 +34,7 @@ public static void main(String[] args) {
 	Exercise4 exercise4 = new Exercise4();
 //	exercise4.question1();
 //	exercise4.question2();
-//	exercise4.question3();
+	exercise4.question3();
 //	exercise4.question4();
 //	exercise4.question5();
 //	exercise4.question6();
@@ -61,6 +65,6 @@ public static void main(String[] args) {
 			//===============EXERCISE-6-7==================================
 //	Exercise5.question6();
 //	Exercise5.question7();
-	Exercise5.question8();
+//	Exercise5.question8();
 }
 }

@@ -12,8 +12,6 @@ public class KhoiThi {
 		return khoi;
 	}
 
-
-
 	public String getBoMon() {
 		switch (this.khoi) {
 		case "A":

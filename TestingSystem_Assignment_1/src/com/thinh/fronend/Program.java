@@ -23,7 +23,9 @@ public class Program {
 
 	public static void main(String[] args) {
 //  TẠO DEPARTMENT
+
 	Department department1 = new Department("PB1");
+	
 	Department department2 = new Department("PB2");
 	Department department3 = new Department("PB3");
 //	System.out.println(department1);

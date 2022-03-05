@@ -7,6 +7,7 @@ public class DemoQLCB {
 
 	public static void main(String[] args) {
 		QLCB_Manager manager = new QLCB_Manager();
+		
 		manager.chuongTrinh();
 //		manager.timCanBo();
 	}

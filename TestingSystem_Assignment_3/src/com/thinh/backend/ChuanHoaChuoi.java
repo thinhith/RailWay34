@@ -19,7 +19,7 @@ public class ChuanHoaChuoi {
 //		DataInputStream ip = new DataInputStream(System.in);
 		Scanner ip = new Scanner(System.in);
 		try {
-//			x = ip.readLine();
+//			x = ip.readLine(); 
 			x = ip.nextLine();
 		} catch (Exception e) {
 			System.out.println("Mời nhập lại !");

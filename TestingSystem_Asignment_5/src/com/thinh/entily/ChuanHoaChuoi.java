@@ -22,14 +22,14 @@ public class ChuanHoaChuoi {
 //			x = ip.readLine();
 			x = ip.nextLine();
 		} catch (Exception e) {
-			System.out.println("M�?i nhập lại !");
+			System.out.println("M�?i nhập lại !");
 			x = nhapString();
 		}
 		return x;
 	}
 
 	public String nhapChuoi() {
-return st = nhapString();
+		return st = nhapString();
 	}
 
 	public String chuanHoa() {
@@ -40,7 +40,8 @@ return st = nhapString();
 		st = st.replaceAll("\\s+", " ");
 
 		/*
-		 * split là thao tác tách các chuỗi thành các chuỗi con dựa vào ký tự truy�?n vào
+		 * split là thao tác tách các chuỗi thành các chuỗi con dựa vào ký tự truy�?n
+		 * vào
 		 */
 		String[] temp = st.split(" ");
 		// sau khi tách xong thì gán st thành rỗng

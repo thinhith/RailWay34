@@ -2,8 +2,13 @@ package com.thinh.enity;
 
 public class Department {
 	public static byte COUNT = 0;
-	byte iD;
+	public byte iD;
 	String name;
+	
+	public Department() {
+		
+	}
+	
 	public Department(String name) {
 		super();
 		COUNT++;
@@ -14,5 +19,9 @@ public class Department {
 	public String toString() {
 		return "Department [iD=" + iD + ", name=" + name + "]";
 	}
+
+
+
+
 	
 }

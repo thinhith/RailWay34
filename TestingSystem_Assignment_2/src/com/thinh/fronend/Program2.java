@@ -60,11 +60,11 @@ public class Program2 {
 //		excercise5.question2();
 //		excercise5.question3();
 //		excercise5.question4();
-//		excercise5.question5();
+		excercise5.question5();
 //		excercise5.question6();
 //		excercise5.question7();
 //		excercise5.question8();
-		excercise5.question9();
+//		excercise5.question9();
 		// =============================================
 //	Excersise2.question1();
 //	Excersise2.question2();
