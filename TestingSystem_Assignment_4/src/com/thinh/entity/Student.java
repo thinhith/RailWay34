@@ -6,6 +6,7 @@ public class Student {
 	public static int COUNT = 0;
 	private int id;
 	private String name;
+
 	public String getName() {
 		return name;
 	}
@@ -28,42 +29,38 @@ public class Student {
 	}
 
 	public Student() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void setPoint(double point) {
-	
+
 		this.point = point;
 	}
-	
+
 	public double getPoint() {
 		return point;
 	}
 
 	public double addPoint(double point2) {
-		
+
 		point += point2;
-		return  point;
+		return point;
 	}
 
-public String toString() {
+	public String toString() {
 //	this.name = name;
 //	this.point = point;
-	String diem = null;
-	if(point <4.0) {
-		 diem = "Yếu";
-	}else if (point < 6.0) {
-		 diem = "TB";
-	}else if(point<8.0) {
-		 diem = "khá";
-	}else {
-		 diem = "giỏi";
+		String diem = null;
+		if (point < 4.0) {
+			diem = "Yếu";
+		} else if (point < 6.0) {
+			diem = "TB";
+		} else if (point < 8.0) {
+			diem = "khá";
+		} else {
+			diem = "giỏi";
+		}
+		System.out.println();
+		return "ID :" + COUNT + "Tên SV :" + name + " Điểm :" + point + " Xếp loại : " + diem;
 	}
-	System.out.println();
-return "ID :" + COUNT +  "Tên SV :" + name +" Điểm :"+point+  " Xếp loại : " + diem;
-}
 
-
-	
-	
 }
