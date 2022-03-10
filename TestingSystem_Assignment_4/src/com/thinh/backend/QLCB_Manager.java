@@ -170,25 +170,90 @@ public class QLCB_Manager {
 	}
 
 	public void timCanBo() {
-		boolean i = false;
-		do {
-			System.out.println("Mời nhập tên cán bộ muốn tìm kiếm");
-			String timKiemCb = chuanHoaChuoi.nhapChuoi();
-			for (QLCB timKiem : qlcb) {
-			
-				timKiemCb = chuanHoaChuoi.chuanHoa();
-				if (timKiem.getHoTen().contains(timKiemCb)) {
-					System.out.println(timKiem.toString());
-					return;
-				} else {
-					System.out.println("Không có cán bộ phù hợp !!! Mời nhập lại");
-					i = false;
+		System.out.println("Mời chọn chức năng tìm kiếm (1 - Theo ID | 2 - Theo Tên)");
+		QLCB timkiemtheoID;
+		ArrayList<QLCB> qlcbs;
+		byte choice;
+		
+
+		 do {
+			 choice = scanner.nextByte();
+			 scanner.nextLine();
+			 switch (choice) {
+//				case 1:
+//					System.out.println("Mời nhập id");
+//					short id = scanner.nextShort();
+//					 scanner.nextLine();
+//					 timkiemtheoID = timkiemCanBoTheoId(id);
+//					 if (timkiemtheoID == null) {
+//							System.out.println("Không tìm thấy Cán Bộ");
+//						} else {
+//							System.out.println(timkiemtheoID);
+//						}
+//					break;
+				case 2:
+					System.out.println("Mời nhập tên");
+					String name = scanner.nextLine();
+					qlcbs = timCanBo(name);
+					if (qlcbs.size()==0) {
+						System.out.println("Không tìm thấy Cán bộ");
+					}else {
+						for (QLCB qlcb : qlcbs) {
+							System.out.println(qlcb);
+						}
+					}
+					break;
+					 
+				default:
+					System.out.println("Mời bạn chọn lại 1 và 2");
 					break;
 				}
-			}
-		} while (i == false);
+		} while (choice < 1 || choice > 2);
+		
+		
+//		QLCB timkiemcanbo;
+//		ArrayList<QLCB>canbo;
+//		System.out.println("Nhập vào id cần tìm kiếm");
+//		String id = scanner.nextLine();
+//		canbo = timCanBo(id);
+//		if (canbo.size() == 0) {
+//			System.out.println("Danh mục rỗng");
+//		}else {
+//			for (QLCB canbo2 : canbo) {
+//				System.out.println(canbo2.toString());
+//			}
+//		}
+		
+//		boolean i = false;
+//		do {
+//			System.out.println("Mời nhập tên cán bộ muốn tìm kiếm");
+//			String timKiemCb = chuanHoaChuoi.nhapChuoi();
+//			for (QLCB timKiem : qlcb) {
+//			
+//				timKiemCb = chuanHoaChuoi.chuanHoa();
+//				if (timKiem.getHoTen().contains(timKiemCb)) {
+//					System.out.println(timKiem.toString());
+//					return;
+//				} else {
+//					System.out.println("Không có cán bộ phù hợp !!! Mời nhập lại");
+//					i = false;
+//					break;
+//				}
+//			}
+//		} while (i == false);
 
 	}
+	// tạo 1 arraylist tìm kiếm theo id
+//	private QLCB timkiemCanBoTheoId(short id) {
+//		for (QLCB qlcb2 : qlcb) {
+//			if (qlcb2.getId == id) {
+//				return qlcb2;
+//			}
+//		}
+//		return null;
+//	}
+	// tạo 1 arraylist tìm kiếm theo tên
+	
 
 	public void hienThi() {
 		for (QLCB hienThi : qlcb) {
@@ -197,29 +262,40 @@ public class QLCB_Manager {
 	}
 
 	public void xoaCanBo() {
+//		QLCB xoaTheoTen;
+		ArrayList<QLCB>canboss;
+		String xoaCB;
+//		String name;
+//		do {
+//			System.out.println("Mời nhập tên Cán bộ cần xoá");
+//			 name = scanner.nextLine();
+//		
+//			if (isNameExist(name)==false) {
+//				System.out.println("Không tìm thấy tên Cán Bộ");
+//			}
+//		} while (isNameExist(name) == false);
+//		scanner.nextLine();
+//		
+//		for (QLCB qlcb1 : qlcb) {
+//			if (qlcb1.getHoTen().contains(name)) {
+//				qlcb.remove(qlcb1);
+//				System.out.println("Xoá thành công cán bộ" + qlcb1.toString());
+//				break;
+//			}
+//		}
 		boolean i = false;
 		do {
 			System.out.println("Nhập tên cán bộ cần xóa");
-			String xoaCB = chuanHoaChuoi.nhapChuoi();
+			xoaCB = chuanHoaChuoi.nhapChuoi();
 			xoaCB = chuanHoaChuoi.chuanHoa();
-//			String xoaCB = scanner.nextLine();
-//			 qlcb.removeIf(thinh -> thinh.getHoTen().contains(xoaCB));
-//			 System.out.println("Xóa thành công");
-//			 for (QLCB qlcb2 : qlcb) {
-//				System.out.println(qlcb2);
-//			}
-//			for(int i2 = 0; i2 <qlcb.size();i2++) {
-//				if(qlcb.get(i2).getHoTen().contains(xoaCB)) {
-//					System.out.println("Xóa thành công " );
-//					i = true ;
-//					return;
-//				}else {
-//					System.out.println("Không tìm thấy cán bộ !! Mời nhập lại");
-//					i = false;
-//					break;
-//				}
-//			}
-			for (QLCB timCB : qlcb) {
+			canboss = timCanBo(xoaCB);
+			for (QLCB timCB : canboss) {
+			/*
+			 * chú ý bên dưới là tạo 1 arraylist tìm kím
+			 * Tìm kiếm được các cán bộ thì add vào arraylist mới
+			 * nhưng khi xoá hay thao tác thì (duyệt bên trong ArrayList phụ nhưng xoá ở arraylist tổng)
+			 */
+				
 				if (timCB.getHoTen().contains(xoaCB)) {
 					qlcb.remove(timCB);
 					System.out.println("Xóa thành công" + timCB.toString());
@@ -231,7 +307,26 @@ public class QLCB_Manager {
 				}
 			}
 		} while (i == false);
-////
+//
+	}
+	private ArrayList<QLCB>timCanBo(String name){
+		ArrayList<QLCB> timkiemCanBo = new ArrayList<QLCB>();
+		name = name.trim().toLowerCase();
+		name = name.replaceAll("\\s+", " ");
+		for (QLCB timcanbo : qlcb) {
+			if (timcanbo.getHoTen().trim().toLowerCase().contains(name)) {
+				timkiemCanBo.add(timcanbo);
+			}
+		}
+		return timkiemCanBo;
+	}
+	public boolean isNameExist(String name) {
+		for (QLCB qlcb2 : qlcb) {
+			if (qlcb2.getHoTen().contains(name)) {
+				return true;
+			}
+		}
+		return false;
 	}
 //	public void nut() {
 //		System.out.println("Bạn có muốn tiếp tục chương trình ? [ Điền (y) để tiếp tục, phím bất kỳ để thoát]");

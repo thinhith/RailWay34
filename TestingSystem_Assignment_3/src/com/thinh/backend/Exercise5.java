@@ -108,15 +108,13 @@ public class Exercise5 {
 		}
 	}
 
-
-
 	public static void question8() {
 		Account acc1 = new Account("Trần Văn A");
 		Account acc2 = new Account("Trần Hưng Fạo");
 		Account acc3 = new Account("Trần Văn Bam");
 		Account acc4 = new Account("Nguyễn Văn Woàn");
 		Account[] accounts = { acc1, acc2, acc3, acc4 };
-		
+
 		for (int i = 0; i < accounts.length; i++) {
 			// Đảo ngược tất cả các từ bằng hàm reverseWords của Java
 			String daoNguocChuoi = daoNguocChuoi(accounts[i].fullName);
@@ -136,7 +134,6 @@ public class Exercise5 {
 		}
 	}
 
-
 	private static String daoNguocChuoi(String name) {
 		name = name.trim();
 		name = name.replaceAll("\\s+", " ");
@@ -149,7 +146,6 @@ public class Exercise5 {
 
 		return name.substring(0, name.length() - 2);
 	}
-
 
 	public static Department[] inputDepartment() {
 
